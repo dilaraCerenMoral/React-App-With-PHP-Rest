@@ -8,9 +8,23 @@ Bu proje CRUD yeteneklerine sahip, OOP prensipleri ile yazılmış bir PHP back-
 ## Gereksinimler
 
 Projeyi çalıştırmak için kendi tercihiniz bir php server'a yüklemeniz yeterlidir.(Örn: Apache).
-En hızlı şekilde siteyi devreye almak için, www klasöründe aşağıdaki komutu çalıştırmanız yeterli olacaktır:
+
+### Hızlı Kurulum
+En hızlı şekilde siteyi devreye almak için:
+
+Proje root klasöründeki sarf.sql dump dosyasını, MySQL kurulumunuzda bir şemaya aktarın.
+Ardından, `./api/config/database.php` dosyasında, aşağıdaki kısımda kullanıcı adı ve şifre ayarlarınızı yapın:
+
+```php
+      // ...
+      private $username = "username";
+      private $password = "xxxxxx";
+      // ...
+```
+Son olarak, www klasöründe aşağıdaki komutu çalıştırmanız yeterli olacaktır:
 
 ``` php -S 127.0.0.1:8000 ```
+(php -S production amaçlı değildir!)
 
 Front-end'in sadece build edilmiş halini kullanmak değil, development versiyonunu da görebilmek ve düzenleme yapabilmek için, aşağıdaki adımları izlemeniz gerekmektedir:
 
